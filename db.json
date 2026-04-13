@@ -1,0 +1,60 @@
+{
+  "units": [
+    { "id": 1, "type": "Length", "label": "Kilometer", "symbol": "km" },
+    { "id": 2, "type": "Length", "label": "Meter", "symbol": "m" },
+    { "id": 3, "type": "Length", "label": "Centimeter", "symbol": "cm" },
+
+    { "id": 4, "type": "Weight", "label": "Kilogram", "symbol": "kg" },
+    { "id": 5, "type": "Weight", "label": "Gram", "symbol": "g" },
+    { "id": 6, "type": "Weight", "label": "Milligram", "symbol": "mg" },
+
+    { "id": 7, "type": "Temperature", "label": "Celsius", "symbol": "c" },
+    { "id": 8, "type": "Temperature", "label": "Fahrenheit", "symbol": "f" },
+    { "id": 9, "type": "Temperature", "label": "Kelvin", "symbol": "k" },
+
+    { "id": 10, "type": "Volume", "label": "Liter", "symbol": "l" },
+    { "id": 11, "type": "Volume", "label": "Milliliter", "symbol": "ml" }
+  ],
+  "conversions": [
+    { "id": 1, "from": "km", "to": "m", "factor": 1000, "formula": null },
+    { "id": 2, "from": "m", "to": "km", "factor": 0.001, "formula": null },
+    { "id": 3, "from": "m", "to": "cm", "factor": 100, "formula": null },
+    { "id": 4, "from": "cm", "to": "m", "factor": 0.01, "formula": null },
+    { "id": 5, "from": "km", "to": "cm", "factor": 100000, "formula": null },
+    { "id": 6, "from": "cm", "to": "km", "factor": 0.00001, "formula": null },
+
+    { "id": 7, "from": "kg", "to": "g", "factor": 1000, "formula": null },
+    { "id": 8, "from": "g", "to": "kg", "factor": 0.001, "formula": null },
+    { "id": 9, "from": "g", "to": "mg", "factor": 1000, "formula": null },
+    { "id": 10, "from": "mg", "to": "g", "factor": 0.001, "formula": null },
+    { "id": 11, "from": "kg", "to": "mg", "factor": 1000000, "formula": null },
+    { "id": 12, "from": "mg", "to": "kg", "factor": 0.000001, "formula": null },
+
+    { "id": 13, "from": "l", "to": "ml", "factor": 1000, "formula": null },
+    { "id": 14, "from": "ml", "to": "l", "factor": 0.001, "formula": null },
+
+    { "id": 15, "from": "c", "to": "f", "factor": null, "formula": "(x * 9 / 5) + 32" },
+    { "id": 16, "from": "f", "to": "c", "factor": null, "formula": "(x - 32) * 5 / 9" },
+    { "id": 17, "from": "c", "to": "k", "factor": null, "formula": "x + 273.15" },
+    { "id": 18, "from": "k", "to": "c", "factor": null, "formula": "x - 273.15" },
+    { "id": 19, "from": "f", "to": "k", "factor": null, "formula": "((x - 32) * 5 / 9) + 273.15" },
+    { "id": 20, "from": "k", "to": "f", "factor": null, "formula": "((x - 273.15) * 9 / 5) + 32" }
+  ],
+  "history": [],
+  "users": [
+    {
+      "id": 1,
+      "name": "Demo User",
+      "email": "demo@test.com",
+      "password": "demo123",
+      "token": "demo-token-12345"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password123",
+      "token": "john-token-67890"
+    }
+  ]
+}

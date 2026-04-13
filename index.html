@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantity Measurement App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <main class="layout">
+        <section class="app-card">
+            <header class="hero">
+                <h1>Welcome To Quantity Measurement</h1>
+                <div class="hero-actions">
+                    <span id="userBadge" class="user-badge"></span>
+                    <button id="logoutBtn" class="secondary" type="button" aria-label="Logout">
+                        <span class="logout-icon" aria-hidden="true">↪</span>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="app-body">
+                <p id="errorBanner" class="error-banner" aria-live="polite"></p>
+
+                <section class="section-block">
+                    <p class="section-title">Choose Type</p>
+                    <div class="type-selector" role="group" aria-label="Measurement type">
+                        <button class="type-btn active" data-type="Length" type="button">
+                            <span class="type-icon" aria-hidden="true">📏</span>
+                            <span class="type-label">Length</span>
+                        </button>
+                        <button class="type-btn" data-type="Weight" type="button">
+                            <span class="type-icon" aria-hidden="true">⚖️</span>
+                            <span class="type-label">Weight</span>
+                        </button>
+                        <button class="type-btn" data-type="Temperature" type="button">
+                            <span class="type-icon" aria-hidden="true">🌡️</span>
+                            <span class="type-label">Temperature</span>
+                        </button>
+                        <button class="type-btn" data-type="Volume" type="button">
+                            <span class="type-icon" aria-hidden="true">🧪</span>
+                            <span class="type-label">Volume</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="section-block">
+                    <p class="section-title">Choose Action</p>
+                    <div class="action-tabs" role="tablist" aria-label="Action mode">
+                        <button class="action-btn active" data-action="Comparison" type="button">Comparison</button>
+                        <button class="action-btn" data-action="Conversion" type="button">Conversion</button>
+                        <button class="action-btn" data-action="Arithmetic" type="button">Arithmetic</button>
+                    </div>
+                </section>
+
+                <section class="input-zone">
+                    <div class="value-block">
+                        <label class="value-title" id="fromValueLabel" for="fromValue">FROM</label>
+                        <div class="value-card">
+                            <input id="fromValue" type="number" step="any" value="1" placeholder="Enter value">
+                            <select id="fromUnit"></select>
+                        </div>
+                        <small id="fromValueError" class="field-error"></small>
+                    </div>
+
+                    <div id="operatorWrap" class="operator-wrap hidden">
+                        <div class="operator-buttons">
+                            <button class="operator-btn active" data-op="+" type="button">+</button>
+                            <button class="operator-btn" data-op="-" type="button">-</button>
+                            <button class="operator-btn" data-op="*" type="button">*</button>
+                            <button class="operator-btn" data-op="/" type="button">/</button>
+                        </div>
+                    </div>
+
+                    <div class="value-block">
+                        <label class="value-title" id="toValueLabel" for="toValue">TO</label>
+                        <div class="value-card">
+                            <input id="toValue" type="number" step="any" value="1000" placeholder="Enter value">
+                            <select id="toUnit"></select>
+                        </div>
+                        <small id="toValueError" class="field-error"></small>
+                    </div>
+                </section>
+
+                <div class="button-row">
+                    <button id="calculateBtn" type="button">Calculate</button>
+                    <button id="resetBtn" class="secondary" type="button">Reset</button>
+                </div>
+
+                <section class="result-box" id="resultBox" aria-live="polite">
+                    <p class="section-title">Result</p>
+                    <div class="result-row">
+                        <p id="resultText">No calculation yet.</p>
+                        <div class="result-unit-wrap" id="resultUnitWrap">
+                            <select id="resultUnit" disabled></select>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <aside class="history-panel">
+            <div class="history-head">
+                <h2>Calculation History</h2>
+                <button id="refreshHistoryBtn" class="secondary" type="button">Refresh</button>
+            </div>
+            <ul id="historyList" class="history-list"></ul>
+        </aside>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

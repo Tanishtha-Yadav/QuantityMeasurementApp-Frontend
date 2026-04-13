@@ -1,0 +1,98 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quantity Measurement - Login</title>
+        <link rel="stylesheet" href="css/auth.css">
+    </head>
+    <body>
+        <main class="auth-shell">
+            <section class="promo-panel">
+                <div class="promo-circle" aria-hidden="true">
+                    <img src="image.png" alt="Quantity Measurement" class="promo-image">
+                </div>
+                <h1>Quantity Measurement</h1>
+                <p>Login or create an account to continue.</p>
+            </section>
+
+            <section class="auth-panel">
+                <div class="auth-tabs" role="tablist" aria-label="Auth tabs">
+                    <button id="loginTab" class="auth-tab active" type="button" data-target="loginForm">Login</button>
+                    <button id="registerTab" class="auth-tab" type="button" data-target="registerForm">Signup</button>
+                </div>
+
+                <form id="loginForm" class="auth-form active" novalidate>
+                    <label for="loginEmail">Email</label>
+                    <input id="loginEmail" type="email" required>
+
+                    <label for="loginPassword">Password</label>
+                    <div class="password-wrap">
+                        <input id="loginPassword" type="password" required>
+                        <button type="button" class="eye-btn" data-input="loginPassword" aria-label="Toggle password visibility">
+                            <svg class="eye-icon eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M1.5 12s3.8-7 10.5-7 10.5 7 10.5 7-3.8 7-10.5 7S1.5 12 1.5 12z"></path>
+                                <circle cx="12" cy="12" r="3.5"></circle>
+                            </svg>
+                            <svg class="eye-icon eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 3l18 18"></path>
+                                <path d="M10.5 6.3A11 11 0 0 1 12 6c6.7 0 10.5 6 10.5 6a17.6 17.6 0 0 1-4 4.9"></path>
+                                <path d="M6 7.8A18.8 18.8 0 0 0 1.5 12S5.3 19 12 19c1.8 0 3.3-.5 4.7-1.2"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button type="submit" class="primary">Login</button>
+                    <p class="switch-text">No account? <button type="button" class="text-btn" data-target="registerForm">Signup</button></p>
+                </form>
+
+                <form id="registerForm" class="auth-form" novalidate>
+                    <label for="registerName">Full Name</label>
+                    <input id="registerName" type="text" required>
+
+                    <label for="registerEmail">Email</label>
+                    <input id="registerEmail" type="email" required>
+
+                    <label for="registerPassword">Password</label>
+                    <div class="password-wrap">
+                        <input id="registerPassword" type="password" minlength="6" required>
+                        <button type="button" class="eye-btn" data-input="registerPassword" aria-label="Toggle password visibility">
+                            <svg class="eye-icon eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M1.5 12s3.8-7 10.5-7 10.5 7 10.5 7-3.8 7-10.5 7S1.5 12 1.5 12z"></path>
+                                <circle cx="12" cy="12" r="3.5"></circle>
+                            </svg>
+                            <svg class="eye-icon eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 3l18 18"></path>
+                                <path d="M10.5 6.3A11 11 0 0 1 12 6c6.7 0 10.5 6 10.5 6a17.6 17.6 0 0 1-4 4.9"></path>
+                                <path d="M6 7.8A18.8 18.8 0 0 0 1.5 12S5.3 19 12 19c1.8 0 3.3-.5 4.7-1.2"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-wrap">
+                        <input id="confirmPassword" type="password" minlength="6" required>
+                        <button type="button" class="eye-btn" data-input="confirmPassword" aria-label="Toggle password visibility">
+                            <svg class="eye-icon eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M1.5 12s3.8-7 10.5-7 10.5 7 10.5 7-3.8 7-10.5 7S1.5 12 1.5 12z"></path>
+                                <circle cx="12" cy="12" r="3.5"></circle>
+                            </svg>
+                            <svg class="eye-icon eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 3l18 18"></path>
+                                <path d="M10.5 6.3A11 11 0 0 1 12 6c6.7 0 10.5 6 10.5 6a17.6 17.6 0 0 1-4 4.9"></path>
+                                <path d="M6 7.8A18.8 18.8 0 0 0 1.5 12S5.3 19 12 19c1.8 0 3.3-.5 4.7-1.2"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <button type="submit" class="primary">Signup</button>
+                    <p class="switch-text">Already have account? <button type="button" class="text-btn" data-target="loginForm">Login</button></p>
+                </form>
+
+                <p id="authMessage" class="auth-message" aria-live="polite"></p>
+            </section>
+        </main>
+
+        <script type="module" src="js/auth.js"></script>
+    </body>
+    </html>
