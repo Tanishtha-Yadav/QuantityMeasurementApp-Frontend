@@ -1,0 +1,11 @@
+{
+  "framework": "angular",
+  "outputDirectory": "dist/quantity-measurement-app",
+  "buildCommand": "npm install && npm run build",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
